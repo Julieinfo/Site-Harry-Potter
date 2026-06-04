@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscription</title>
+	<link rel="icon" type="image/png" href="../images/logo.png" />
+    <link href="../styles/scriptR.css" rel="stylesheet" />
+	<script type="text/javascript" src="../styles/scriptR.js" ></script>
+</head>
+<body>
+
+    <header>
+        <h1>Inscription en ligne</h1>
+    </header>
+	
+    <form action="https://httpbin.org/get" method="GET">
+        <fieldset>
+            <legend>Informations Personnelles</legend>
+            <label for="civilite">Civilité :</label>
+            <select id="civilite" name="civilite">
+                <option value="M.">M.</option>
+                <option value="Mme">Mme</option>
+            </select>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" pattern="[a-zA-ZéèçàùëüäöîïÉÈÇÀÙËÜÄÖÎÏ '-]+" title="Veuillez compléter ce champ." class="tooltip" />
+            <span class="tooltiptext">Veuillez compléter ce champ.</span>
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" pattern="[a-zA-ZéèçàùëüäöîïÉÈÇÀÙËÜÄÖÎÏ '-]+" title="Veuillez compléter ce champ." class="tooltip" />
+            <span class="tooltiptext">Veuillez compléter ce champ.</span>
+            <label for="telephone">Téléphone :</label>
+            <input type="telephone" id="telephone" name="telephone" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" title="Format requis: 07-12-34-56-78" class="tooltip" />
+            <span class="tooltiptext">Veuillez respecter le format requis.</span>
+            <label for="date_naissance">Date de naissance :</label>
+            <input type="date" id="date_naissance" name="date_naissance" class="tooltip" />
+            <span class="tooltiptext">Veuillez compléter ce champ.</span>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" title="Veuillez saisir une adresse électronique valide." class="tooltip" />
+            <span class="tooltiptext">Veuillez saisir une adresse électronique valide.</span>
+        </fieldset>
+        <button type="submit" value="Envoyer" onclick="summarizeForm()">Envoyer</button>
+        <button type="reset">Annuler</button>
+    </form>
+	
+    <footer>
+        <div class="footer-logo">
+            <img src="../images/logo.png" alt="Logo" />
+        </div>
+        <p>© 2024 Website des Sœurs Potter. Tous droits réservés.</p>
+        <ul class="footer-links">
+            <li><a href="">Mentions légales</a></li>
+            <li><a href="">Politique en matière de cookies</a></li>
+            <li><a href="">Politique de confidentialité</a></li>
+            <li><a href="">Conditions d'utilisation</a></li>
+        </ul>
+    </footer>
+	
+</body>
+</html>

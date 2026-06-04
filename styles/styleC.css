@@ -1,0 +1,433 @@
+/* Styles Communs (Base pour toutes les pages) - Thème HP */
+body {
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif; /* Police de style classique et élégante */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f0e3; /* Beige parchemin clair */
+    color: #333;
+}
+
+header {
+    background-color: #4b3523; /* Marron foncé Poudlard/Bois */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
+}
+
+header h1 {
+    font-family: 'Cinzel', serif; /* Police épique pour le titre */
+    color: #e0b973; /* Or vieilli */
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 3em;
+    letter-spacing: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espace augmenté */
+    flex-wrap: wrap;
+}
+
+.menu-button {
+    color: #f8f0e3; /* Couleur parchemin clair */
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.2s, color 0.3s;
+    font-weight: 700; /* Plus audacieux */
+    border: 1px solid transparent;
+}
+
+.menu-button:hover {
+    background-color: rgba(224, 185, 115, 0.2); /* Fond subtil en survol */
+    color: #e0b973; /* Texte doré en survol */
+    transform: translateY(-2px);
+    border: 1px solid #e0b973;
+}
+
+#actif {
+    background-color: #e0b973; /* Fond doré pour la page active */
+    color: #4b3523; /* Texte marron foncé */
+    box-shadow: 0 0 15px rgba(224, 185, 115, 0.7); /* Lueur dorée */
+    font-weight: 900;
+}
+
+section {
+    padding: 40px 30px;
+    margin: 30px auto;
+    max-width: 1100px; /* Légèrement plus petit pour l'aspect carrousel */
+    background-color: white;
+    border-radius: 12px;
+    border: 2px solid #a0907d; /* Bordure d'aspect vieilli */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+    background-color: #2c2a27;
+    color: #ccc;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.footer-logo img {
+    width: 80px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #e0b973;
+}
+
+/* Styles Spécifiques à la page Collection (collection.html) */
+.carousel {
+    /* Maintient les styles de section */
+    overflow: hidden;
+    padding: 0;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 30px 20px; /* Padding ajusté */
+}
+
+/* Animation et style pour l'image */
+.slide img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 3px solid #4b3523; /* Cadre marron */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Ajout des transitions */
+}
+
+.slide img:hover {
+    transform: scale(1.02); /* Jolie animation de zoom au survol */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.slide p {
+    font-family: 'Cinzel', serif; /* Titre plus élégant pour la description */
+    font-style: normal;
+    font-weight: 700;
+    color: #4b3523; /* Marron Poudlard pour le texte */
+    margin-top: 25px;
+    font-size: 1.1em;
+}
+
+/* Styles pour les boutons de navigation du carrousel */
+.carousel .prev, .carousel .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #e0b973; /* Flèches dorées */
+    font-weight: bold;
+    font-size: 24px; /* Plus grand */
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: rgba(75, 53, 35, 0.7); /* Fond marron semi-transparent */
+    border: none;
+    z-index: 10;
+    border-radius: 50%; /* Boutons ronds */
+    width: 44px;
+    height: 44px;
+    line-height: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .next {
+    right: 15px; /* Décalage des côtés */
+    border-radius: 50%;
+}
+
+.carousel .prev {
+    left: 15px; /* Décalage des côtés */
+    border-radius: 50%;
+}
+
+.carousel .prev:hover, .carousel .next:hover {
+    background-color: #4b3523; /* Marron opaque au survol */
+    color: white;
+}
+
+/* Styles pour le mode plein écran */
+#fullscreen-overlay {
+    background-color: rgba(28, 26, 23, 0.95); /* Noir charbon plus opaque */
+}
+
+#fullscreen-image {
+    box-shadow: 0 0 40px rgba(224, 185, 115, 0.8); /* Lueur dorée en plein écran */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+}
+
+/* ===== Collection Page Specific Enhancements ===== */
+
+/* Section Animation */
+section {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+section h2 {
+    color: #8b0000;
+    font-family: 'Cinzel', serif;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    border-bottom: 3px double #e0b973;
+    padding-bottom: 10px;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Carousel Slide Animations */
+.slide {
+    animation: slideIn 0.6s ease-in-out;
+}
+
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 0.1s; }
+.slide:nth-child(3) { animation-delay: 0.2s; }
+.slide:nth-child(4) { animation-delay: 0.3s; }
+.slide:nth-child(5) { animation-delay: 0.4s; }
+
+/* Enhanced Image Effects */
+.slide img {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease;
+}
+
+.slide img:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 15px 35px rgba(224, 185, 115, 0.4), inset 0 0 10px rgba(224, 185, 115, 0.1);
+    filter: brightness(1.1);
+}
+
+/* Description Text Animations */
+.slide p {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease 0.3s forwards;
+    transition: color 0.3s ease;
+}
+
+.slide:hover p {
+    color: #8b0000;
+}
+
+/* Navigation Button Enhancements */
+.carousel .prev, .carousel .next {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel .prev:hover, .carousel .next:hover {
+    background-color: #8b0000;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(224, 185, 115, 0.5), inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel .prev:active, .carousel .next:active {
+    transform: scale(0.95);
+}
+
+/* Fullscreen Overlay Enhancements */
+#fullscreen-overlay {
+    animation: fadeIn 0.4s ease;
+}
+
+#fullscreen-image {
+    animation: zoomIn 0.5s ease;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* Carousel Container Glow Effect */
+.carousel-container {
+    position: relative;
+}
+
+.carousel-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.05) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* ===== Animation Keyframes ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideLeftIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRightIn {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes shimmer {
+    0%, 100% {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        box-shadow: 0 8px 20px rgba(224, 185, 115, 0.5);
+    }
+}
+
+/* ===== Responsive Design Enhancements ===== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+        letter-spacing: 3px;
+    }
+
+    .carousel .prev, .carousel .next {
+        padding: 12px;
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    section {
+        padding: 20px 15px;
+        margin: 20px 10px;
+    }
+
+    .slide {
+        padding: 20px 15px;
+    }
+
+    .slide img {
+        max-width: 90%;
+    }
+
+    .slide p {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+        letter-spacing: 2px;
+    }
+
+    .carousel .prev, .carousel .next {
+        padding: 8px;
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+        top: 40%;
+    }
+
+    section {
+        padding: 15px 10px;
+        margin: 15px 5px;
+    }
+
+    .slide {
+        padding: 15px 10px;
+    }
+
+    .slide img {
+        max-width: 95%;
+    }
+
+    .slide p {
+        font-size: 0.9em;
+        margin-top: 15px;
+    }
+}
