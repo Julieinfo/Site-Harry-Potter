@@ -1,0 +1,178 @@
+/* Boutons parchemin — lueur dorée Lumos au survol */
+
+@keyframes lumos-glow {
+    0%, 100% {
+        box-shadow:
+            0 0 10px rgba(255, 220, 120, 0.75),
+            0 0 22px rgba(var(--couleur-or-rgb), 0.65),
+            0 0 38px rgba(255, 200, 80, 0.45),
+            0 0 58px rgba(255, 180, 50, 0.25),
+            inset 0 0 14px rgba(255, 235, 160, 0.2);
+    }
+    50% {
+        box-shadow:
+            0 0 16px rgba(255, 240, 150, 1),
+            0 0 34px rgba(255, 215, 100, 0.9),
+            0 0 52px rgba(var(--couleur-or-rgb), 0.75),
+            0 0 78px rgba(255, 190, 70, 0.5),
+            inset 0 0 22px rgba(255, 248, 180, 0.35);
+    }
+}
+
+.menu-button,
+button[type="submit"],
+button[type="reset"],
+.btn,
+.btn-primary,
+.btn-secondary,
+.carousel .prev,
+.carousel .next,
+button.prev,
+button.next {
+    font-family: 'Cormorant Garamond', 'Cinzel', serif;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--couleur-marron-fonce);
+    background-color: var(--couleur-parchemin-bouton);
+    background-image:
+        radial-gradient(ellipse at 20% 30%, rgba(255, 255, 255, 0.45) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 70%, rgba(139, 105, 74, 0.08) 0%, transparent 50%),
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 3px,
+            rgba(107, 79, 58, 0.04) 3px,
+            rgba(107, 79, 58, 0.04) 4px
+        ),
+        linear-gradient(145deg, #faf3e3 0%, #efe4cc 48%, #f7efd9 100%);
+    border: 1px solid #6b4f3a;
+    box-shadow:
+        0 2px 4px rgba(var(--couleur-marron-fonce-rgb), 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    transition:
+        box-shadow 0.5s ease,
+        color 0.35s ease,
+        border-color 0.35s ease,
+        transform 0.25s ease,
+        background-color 0.35s ease;
+}
+
+.menu-button {
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 25px;
+}
+
+button[type="submit"],
+button[type="reset"] {
+    padding: 12px 25px;
+    margin-right: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary,
+.btn-secondary {
+    color: var(--couleur-marron-fonce);
+}
+
+.carousel .prev,
+.carousel .next,
+button.prev,
+button.next {
+    cursor: pointer;
+    color: var(--couleur-or-texte-sur-clair);
+    font-weight: bold;
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    margin-top: -22px;
+    padding: 16px;
+    font-size: 24px;
+    z-index: 10;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    line-height: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+button.prev {
+    left: 15px;
+}
+
+button.next {
+    right: 15px;
+}
+
+.gallery {
+    position: relative;
+}
+
+.menu-button:hover,
+button[type="submit"]:hover,
+button[type="reset"]:hover,
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.carousel .prev:hover,
+.carousel .next:hover,
+button.prev:hover,
+button.next:hover {
+    color: var(--couleur-or-texte-sur-clair);
+    border-color: var(--couleur-or-survol-bordure);
+    transform: translateY(-2px);
+    animation: lumos-glow 2.2s ease-in-out infinite;
+}
+
+#actif.menu-button,
+a.menu-button#actif {
+    color: var(--couleur-or-texte-sur-clair);
+    border-color: var(--couleur-or-ui);
+    font-weight: 700;
+    box-shadow:
+        0 0 12px rgba(var(--couleur-or-rgb), 0.55),
+        0 2px 4px rgba(var(--couleur-marron-fonce-rgb), 0.15),
+        inset 0 0 10px rgba(255, 230, 150, 0.15);
+}
+
+#actif.menu-button:hover,
+a.menu-button#actif:hover {
+    animation: lumos-glow 2.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .menu-button:hover,
+    button[type="submit"]:hover,
+    button[type="reset"]:hover,
+    .btn:hover,
+    .btn-primary:hover,
+    .btn-secondary:hover,
+    .carousel .prev:hover,
+    .carousel .next:hover,
+    button.prev:hover,
+    button.next:hover,
+    #actif.menu-button:hover,
+    a.menu-button#actif:hover {
+        animation: none;
+        box-shadow:
+            0 0 12px rgba(var(--couleur-or-rgb), 0.7),
+            0 0 24px rgba(var(--couleur-or-rgb), 0.45);
+    }
+}

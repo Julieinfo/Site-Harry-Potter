@@ -18,7 +18,7 @@ header {
 
 header h1 {
     font-family: 'Cinzel', serif;
-    color: #e0b973;
+    color: var(--couleur-or);
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 3em;
@@ -44,16 +44,16 @@ nav {
 }
 
 .menu-button:hover {
-    background-color: rgba(224, 185, 115, 0.2);
-    color: #e0b973;
+    background-color: rgba(var(--couleur-or-rgb), 0.2);
+    color: var(--couleur-or);
     transform: translateY(-2px);
-    border: 1px solid #e0b973;
+    border: 1px solid var(--couleur-or);
 }
 
 #actif {
-    background-color: #e0b973;
+    background-color: var(--couleur-or);
     color: #4b3523;
-    box-shadow: 0 0 15px rgba(224, 185, 115, 0.7);
+    box-shadow: 0 0 15px rgba(var(--couleur-or-rgb), 0.7);
     font-weight: 900;
 }
 
@@ -75,7 +75,7 @@ section h2 {
     font-family: 'Cinzel', serif;
     margin-bottom: 30px;
     font-size: 2.2em;
-    border-bottom: 3px double #e0b973;
+    border-bottom: 3px double var(--couleur-or);
     padding-bottom: 10px;
     text-align: center;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
@@ -87,7 +87,7 @@ section h3 {
     color: #8b0000;
     margin-top: 25px;
     margin-bottom: 15px;
-    border-left: 4px solid #e0b973;
+    border-left: 4px solid var(--couleur-or);
     padding-left: 15px;
 }
 
@@ -140,7 +140,7 @@ footer {
 }
 
 .footer-links a:hover {
-    color: #e0b973;
+    color: var(--couleur-or);
 }
 
 /* ===== Animation Keyframes ===== */
@@ -343,5 +343,5 @@ footer {
 }
 
 .footer-links a:hover {
-    color: #e0b973;
+    color: var(--couleur-or);
 }

@@ -16,7 +16,7 @@ header {
 
 header h1 {
     font-family: 'Cinzel', serif;
-    color: #e0b973;
+    color: var(--couleur-or);
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 3em;
@@ -42,16 +42,16 @@ nav {
 }
 
 .menu-button:hover {
-    background-color: rgba(224, 185, 115, 0.2);
-    color: #e0b973;
+    background-color: rgba(var(--couleur-or-rgb), 0.2);
+    color: var(--couleur-or);
     transform: translateY(-2px);
-    border: 1px solid #e0b973;
+    border: 1px solid var(--couleur-or);
 }
 
 #actif {
-    background-color: #e0b973;
+    background-color: var(--couleur-or);
     color: #4b3523;
-    box-shadow: 0 0 15px rgba(224, 185, 115, 0.7);
+    box-shadow: 0 0 15px rgba(var(--couleur-or-rgb), 0.7);
     font-weight: 900;
 }
 
@@ -70,7 +70,7 @@ form h2 {
     font-family: 'Cinzel', serif;
     margin-bottom: 20px;
     font-size: 2em;
-    border-bottom: 3px double #e0b973;
+    border-bottom: 3px double var(--couleur-or);
     padding-bottom: 10px;
     text-align: center;
 }
@@ -112,14 +112,21 @@ select {
     color: #333;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-input[type="date"]:focus,
-select:focus {
+input[type="text"]:focus:not(:focus-visible),
+input[type="email"]:focus:not(:focus-visible),
+input[type="tel"]:focus:not(:focus-visible),
+input[type="date"]:focus:not(:focus-visible),
+select:focus:not(:focus-visible) {
     outline: none;
-    border-color: #e0b973;
-    box-shadow: 0 0 5px rgba(224, 185, 115, 0.5);
+}
+
+input[type="text"]:focus-visible,
+input[type="email"]:focus-visible,
+input[type="tel"]:focus-visible,
+input[type="date"]:focus-visible,
+select:focus-visible {
+    border-color: var(--couleur-or-ui);
+    box-shadow: 0 0 0 1px var(--couleur-parchemin), 0 0 8px rgba(var(--couleur-or-rgb), 0.45);
 }
 
 button[type="submit"],
@@ -168,7 +175,7 @@ footer {
 }
 
 .footer-links a:hover {
-    color: #e0b973;
+    color: var(--couleur-or);
 }
 
 /* ===== Section Styling (Index.html) ===== */
@@ -188,7 +195,7 @@ section h2 {
     font-family: 'Cinzel', serif;
     margin-bottom: 30px;
     font-size: 2.2em;
-    border-bottom: 3px double #e0b973;
+    border-bottom: 3px double var(--couleur-or);
     padding-bottom: 10px;
     text-align: center;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
@@ -297,10 +304,10 @@ section h2 {
 
 @keyframes glow {
     0%, 100% {
-        box-shadow: 0 0 10px rgba(224, 185, 115, 0.5);
+        box-shadow: 0 0 10px rgba(var(--couleur-or-rgb), 0.5);
     }
     50% {
-        box-shadow: 0 0 20px rgba(224, 185, 115, 0.8);
+        box-shadow: 0 0 20px rgba(var(--couleur-or-rgb), 0.8);
     }
 }
 

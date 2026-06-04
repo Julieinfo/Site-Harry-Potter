@@ -17,7 +17,7 @@ header {
 
 header h1 {
     font-family: 'Cinzel', serif; /* Police épique pour le titre */
-    color: #e0b973; /* Or vieilli */
+    color: var(--couleur-or); /* Or vieilli */
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 3em;
@@ -43,16 +43,16 @@ nav {
 }
 
 .menu-button:hover {
-    background-color: rgba(224, 185, 115, 0.2); /* Fond subtil en survol */
-    color: #e0b973; /* Texte doré en survol */
+    background-color: rgba(var(--couleur-or-rgb), 0.2); /* Fond subtil en survol */
+    color: var(--couleur-or); /* Texte doré en survol */
     transform: translateY(-2px);
-    border: 1px solid #e0b973;
+    border: 1px solid var(--couleur-or);
 }
 
 #actif {
-    background-color: #e0b973; /* Fond doré pour la page active */
+    background-color: var(--couleur-or); /* Fond doré pour la page active */
     color: #4b3523; /* Texte marron foncé */
-    box-shadow: 0 0 15px rgba(224, 185, 115, 0.7); /* Lueur dorée */
+    box-shadow: 0 0 15px rgba(var(--couleur-or-rgb), 0.7); /* Lueur dorée */
     font-weight: 900;
 }
 
@@ -92,7 +92,7 @@ footer {
 }
 
 .footer-links a:hover {
-    color: #e0b973;
+    color: var(--couleur-or);
 }
 
 /* Styles Spécifiques à la page Collection (collection.html) */
@@ -148,7 +148,7 @@ footer {
     width: auto;
     padding: 16px;
     margin-top: -22px;
-    color: #e0b973; /* Flèches dorées */
+    color: var(--couleur-or); /* Flèches dorées */
     font-weight: bold;
     font-size: 24px; /* Plus grand */
     transition: 0.6s ease;
@@ -187,7 +187,7 @@ footer {
 }
 
 #fullscreen-image {
-    box-shadow: 0 0 40px rgba(224, 185, 115, 0.8); /* Lueur dorée en plein écran */
+    box-shadow: 0 0 40px rgba(var(--couleur-or-rgb), 0.8); /* Lueur dorée en plein écran */
 }
 
 /* Media Queries */
@@ -210,7 +210,7 @@ section h2 {
     font-family: 'Cinzel', serif;
     margin-bottom: 30px;
     font-size: 2.2em;
-    border-bottom: 3px double #e0b973;
+    border-bottom: 3px double var(--couleur-or);
     padding-bottom: 10px;
     text-align: center;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
@@ -234,7 +234,7 @@ section h2 {
 
 .slide img:hover {
     transform: scale(1.05) rotate(1deg);
-    box-shadow: 0 15px 35px rgba(224, 185, 115, 0.4), inset 0 0 10px rgba(224, 185, 115, 0.1);
+    box-shadow: 0 15px 35px rgba(var(--couleur-or-rgb), 0.4), inset 0 0 10px rgba(var(--couleur-or-rgb), 0.1);
     filter: brightness(1.1);
 }
 
@@ -258,7 +258,7 @@ section h2 {
 .carousel .prev:hover, .carousel .next:hover {
     background-color: #8b0000;
     transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(224, 185, 115, 0.5), inset 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(var(--couleur-or-rgb), 0.5), inset 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .carousel .prev:active, .carousel .next:active {
@@ -363,7 +363,7 @@ section h2 {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
     50% {
-        box-shadow: 0 8px 20px rgba(224, 185, 115, 0.5);
+        box-shadow: 0 8px 20px rgba(var(--couleur-or-rgb), 0.5);
     }
 }
 

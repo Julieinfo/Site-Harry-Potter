@@ -1,0 +1,76 @@
+/*
+ * Thème centralisé — couleur dorée & accessibilité (WCAG 2.1 niveau AA)
+ * --couleur-or : référence unique du doré (bordures, lueurs, décoration)
+ */
+
+:root {
+    --couleur-or: #e0b973;
+    --couleur-or-rgb: 224, 185, 115;
+
+    /* Texte : ≥ 4,5:1 sur fond sombre (#4b3523) ou clair (#f8f0e3) */
+    --couleur-or-texte-sur-fonce: #f2dea0;
+    --couleur-or-texte-sur-clair: #5e4a0f;
+
+    /* Composants UI (bordures, focus) : ≥ 3:1 sur fond clair */
+    --couleur-or-ui: #8f7428;
+    --couleur-or-survol-bordure: #9a7b28;
+    --couleur-or-fond-actif: #d4b15a;
+
+    --couleur-marron-fonce: #4b3523;
+    --couleur-marron-fonce-rgb: 75, 53, 35;
+    --couleur-parchemin: #f8f0e3;
+    --couleur-parchemin-bouton: #f5edd6;
+    --couleur-texte: #333333;
+    --couleur-lien-footer: #c8c8c8;
+
+    /* Alias (styleR et extensions) */
+    --primary-gold: var(--couleur-or);
+}
+
+/* Titres sur en-tête sombre */
+header h1 {
+    color: var(--couleur-or-texte-sur-fonce);
+}
+
+/* Liens pied de page : contraste renforcé + survol lisible */
+.footer-links a {
+    color: var(--couleur-lien-footer);
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+    color: var(--couleur-or-texte-sur-fonce);
+}
+
+/* Focus clavier visible (WCAG 2.4.7) */
+a:focus-visible,
+button:focus-visible,
+.menu-button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--couleur-or-ui);
+    outline-offset: 3px;
+}
+
+input:focus-visible,
+select:focus-visible {
+    border-color: var(--couleur-or-ui);
+    box-shadow: 0 0 0 1px var(--couleur-parchemin), 0 0 8px rgba(var(--couleur-or-rgb), 0.45);
+}
+
+/* Bordures dorées sur cartes / sections claires */
+section h2,
+.presentation h2,
+.character:hover,
+.house:hover,
+.horcrux:hover,
+.voyage-card:hover,
+.film-info:hover {
+    border-color: var(--couleur-or-ui);
+}
+
+section h2,
+.presentation h2 {
+    border-bottom-color: var(--couleur-or-ui);
+}
+

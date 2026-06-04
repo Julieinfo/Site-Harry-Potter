@@ -16,7 +16,7 @@ header {
 
 header h1 {
     font-family: 'Cinzel', serif;
-    color: #e0b973;
+    color: var(--couleur-or);
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 3em;
@@ -42,16 +42,16 @@ nav {
 }
 
 .menu-button:hover {
-    background-color: rgba(224, 185, 115, 0.2);
-    color: #e0b973;
+    background-color: rgba(var(--couleur-or-rgb), 0.2);
+    color: var(--couleur-or);
     transform: translateY(-2px);
-    border: 1px solid #e0b973;
+    border: 1px solid var(--couleur-or);
 }
 
 #actif {
-    background-color: #e0b973;
+    background-color: var(--couleur-or);
     color: #4b3523;
-    box-shadow: 0 0 15px rgba(224, 185, 115, 0.7);
+    box-shadow: 0 0 15px rgba(var(--couleur-or-rgb), 0.7);
     font-weight: 900;
 }
 
@@ -88,8 +88,8 @@ nav {
 
 .film-info:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(224, 185, 115, 0.3), inset 0 0 10px rgba(224, 185, 115, 0.05);
-    border-color: #e0b973;
+    box-shadow: 0 12px 25px rgba(var(--couleur-or-rgb), 0.3), inset 0 0 10px rgba(var(--couleur-or-rgb), 0.05);
+    border-color: var(--couleur-or);
 }
 
 .film-info h2 {
@@ -153,7 +153,7 @@ footer {
 }
 
 .footer-links a:hover {
-    color: #e0b973;
+    color: var(--couleur-or);
 }
 
 /* ===== Section Styling ===== */
@@ -174,7 +174,7 @@ section h2 {
     font-family: 'Cinzel', serif;
     margin-bottom: 30px;
     font-size: 2.2em;
-    border-bottom: 3px double #e0b973;
+    border-bottom: 3px double var(--couleur-or);
     padding-bottom: 10px;
     text-align: center;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
@@ -239,7 +239,7 @@ section h2 {
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
     50% {
-        box-shadow: 0 8px 25px rgba(224, 185, 115, 0.3);
+        box-shadow: 0 8px 25px rgba(var(--couleur-or-rgb), 0.3);
     }
 }
 
@@ -348,5 +348,5 @@ footer {
 }
 
 .footer-links a:hover {
-    color: #e0b973;
+    color: var(--couleur-or);
 }
