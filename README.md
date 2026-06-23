@@ -1,6 +1,6 @@
-# 🧙 Les Sœurs Potter — Site Fan Harry Potter
+# 🧙 Les Sœurs Potter - Site Fan Harry Potter
 
-> Site web thématique dédié à l'univers magique de Harry Potter — Projet personnel réalisé en HTML/CSS/JavaScript.
+> Site web thématique dédié à l'univers magique de Harry Potter - Projet personnel réalisé en HTML5/CSS3/JavaScript.
 
 ---
 
@@ -75,6 +75,6 @@ Site-Harry-Potter/
 
 ## 👩‍💻 Auteure
 
-**Julie de Castro** — Étudiante en L3 Informatique · UPPA
+**Julie De Castro** - Étudiante en L3 Informatique · UPPA
 - 🌐 [julieinfo.github.io](https://julieinfo.github.io)
 - 📧 [juliedecastro2003@gmail.com](mailto:juliedecastro2003@gmail.com)
